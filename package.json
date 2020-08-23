@@ -1,0 +1,24 @@
+{
+  "name": "sapui5-template-builder",
+  "version": "1.0.0",
+  "description": "SAPUI5 Template Builder",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssaisanthosh/SAPUI5-Template-Builder.git"
+  },
+  "keywords": [
+    "SAPUI5",
+    "Template",
+    "Builder"
+  ],
+  "author": "S. Sai Santhosh <<me@ssaisanthosh.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ssaisanthosh/SAPUI5-Template-Builder/issues"
+  },
+  "homepage": "https://github.com/ssaisanthosh/SAPUI5-Template-Builder#readme"
+}
