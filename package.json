@@ -1,8 +1,11 @@
 {
-  "name": "sapui5-template-builder",
+  "name": "sapui5-tb",
   "version": "1.0.0",
   "description": "SAPUI5 Template Builder",
-  "main": "index.js",
+  "main": "./bin/index.js",
+  "bin": {
+    "sapui5-tb": "./bin/index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/ssaisanthosh/SAPUI5-Template-Builder/issues"
   },
-  "homepage": "https://github.com/ssaisanthosh/SAPUI5-Template-Builder#readme"
+  "homepage": "https://github.com/ssaisanthosh/SAPUI5-Template-Builder#readme",
+  "dependencies": {
+    "chalk-pipe": "^4.0.0",
+    "inquirer": "^7.3.3"
+  }
 }
