@@ -1,39 +1,18 @@
 "use strict";
 const fs = require("fs");
-exports.ui5_yaml = function (folder) {
-  let oData = "specVersion: '1.0'" + 
-  metadata:" + 
-    name: Project" + 
-  type: application" + 
-  resources:" + 
-    configuration:" + 
-      propertiesFileSourceEncoding: UTF-8" + 
-  builder:" + 
-    customTasks:" + 
-      - name: webide-extension-task-updateManifestJson" + 
-        beforeTask: generateManifestBundle" + 
-        configuration:" + 
-          appFolder: webapp" + 
-          destDir: dist" + 
-      - name: webide-extension-task-updateNeoApp" + 
-        afterTask: generateVersionInfo" + 
-        configuration:" + 
-          destDir: dist" + 
-          appFolder: webapp" + 
-          nameSpace: Namespace" + 
-      - name: webide-extension-task-lint" + 
-        afterTask: webide-extension-task-updateNeoApp" + 
-        configuration:" + 
-          destDir: dist" + 
-          appFolder: webapp" + 
-          nameSpace: Namespace" + 
-      - name: webide-extension-task-resources" + 
-        afterTask: webide-extension-task-lint" + 
-        configuration:" + 
-          nameSpace: Namespace";
-
-  fs.writeFile(folder + "/ui5.yaml", oData, function (err) {
-    if (err) return console.log(err);
-    // console.log("Hello World > helloworld.txt");
+// replaceString = require("string-replace-async");
+exports.file = function (source, file, project, namespace, viewname) {
+  fs.readFile("./template/" + source + ".tbs", "utf8", (err, data) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    var sData = data.replace(/<<#Project#>>/g, project);
+    sData = sData.replace(/<<#Namespace#>>/g, namespace);
+    sData = sData.replace(/<<#ViewName#>>/g, viewname);
+    sData = sData.replace(/<<#NamespaceDefine#>>/g, namespace.replace(/[.]/g, "/"));
+    fs.writeFile(project + "/" + file , sData, function (err) {
+      if (err) return console.log(err);
+    });
   });
 };

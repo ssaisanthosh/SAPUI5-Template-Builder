@@ -9,9 +9,13 @@ SAPUI5 Template Builder
     + View Name
   + Custom
   
-
++ ### 26.08.2020
+  + Completed SAPUI5 Application
 + ### 24.08.2020
   + Till Input Function array
+
+### ToDo
++ Templates from CDN 
 
 ### Reference
 Icons: 
