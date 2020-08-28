@@ -8,7 +8,9 @@ SAPUI5 Template Builder
     + View Type
     + View Name
   + Custom
-  
+
++ ### 28.08.2020
+  + Renamed component.js file to Component.js  
 + ### 26.08.2020
   + Completed SAPUI5 Application
 + ### 24.08.2020

@@ -145,7 +145,7 @@ exports.build = function (result) {
     console.log(chalkPipe("greenBright.bold")("[CREATED][12/14]") + "  Manifest File Created.");
     builder.file("index_html", "index.html", result.ProjectName, result.Namespace, result.ViewName);
     console.log(chalkPipe("greenBright.bold")("[CREATED][13/14]") + "  Index File Created.");
-    builder.file("component_js", "component.js", result.ProjectName, result.Namespace, result.ViewName);
+    builder.file("component_js", "Component.js", result.ProjectName, result.Namespace, result.ViewName);
     console.log(chalkPipe("greenBright.bold")("[CREATED][14/14]") + "  Component File Created.");
     resolve(true);    
   });

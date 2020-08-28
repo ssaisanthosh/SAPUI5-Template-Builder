@@ -26,6 +26,7 @@
   "homepage": "https://github.com/ssaisanthosh/SAPUI5-Template-Builder#readme",
   "dependencies": {
     "chalk-pipe": "^4.0.0",
+    "g": "^2.0.1",
     "inquirer": "^7.3.3"
   }
 }
